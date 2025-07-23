@@ -29,7 +29,7 @@ async function obtenerClima(ciudad) {
     const icono = data.weather[0].icon;
     const precipitaciones = data.rain ? (data.rain["1h"] || 0) : 0;
     const humedad = data.main.humidity;
-    const viento = Math.round(data.wind.speed * 3.6); // m/s → km/h
+    const viento = Math.round(data.wind.speed * 3.6); 
 
     const fecha = new Date();
     const fechaFormateada = fecha.toLocaleString('es-CO', { weekday: 'long', hour: 'numeric', minute: 'numeric' });
